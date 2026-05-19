@@ -49,14 +49,6 @@ For singular content, you can also add page-specific scripts and optionally disa
 
 The plugin supports public post types except attachments.
 
-## Files In This Repo
-
-- `smart-script-manager.php`: main plugin bootstrap
-- `admin/`: settings page, metabox, and admin asset loading
-- `includes/`: settings registration, save logic, and frontend output
-- `assets/`: admin CSS and JS
-- `readme.txt`: WordPress.org-style plugin readme
-
 ## Why There Are Two Readme Files
 
 - `README.md` is for GitHub and humans browsing the repository.
@@ -72,7 +64,3 @@ Yes, keeping both is normal for WordPress plugins.
 ## License
 
 GPL-2.0-or-later
-
-## Author
-
-Vishal Gularia
