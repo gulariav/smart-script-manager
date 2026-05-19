@@ -35,19 +35,45 @@ function ssm_should_disable_global() {
 }
 
 /**
+ * Build a readable label for the output location.
+ *
+ * @param string $location Script location.
+ * @return string
+ */
+function ssm_get_location_label($location) {
+    $labels = array(
+        'header' => 'Header',
+        'body'   => 'Body',
+        'footer' => 'Footer',
+    );
+
+    return isset($labels[$location]) ? $labels[$location] : ucfirst($location);
+}
+
+/**
  * Echo a stored script block if it is not empty.
  *
  * @param string $content Script content.
+ * @param string $location Script location.
+ * @param string $scope Global or page-level scope label.
  * @return void
  */
-function ssm_echo_script_block($content) {
+function ssm_echo_script_block($content, $location, $scope) {
     $content = trim((string) $content);
 
     if ($content === '') {
         return;
     }
 
+    $label = sprintf(
+        'Smart Script Manager: %s %s Scripts',
+        trim((string) $scope),
+        ssm_get_location_label($location)
+    );
+
+    echo "\n<!-- " . esc_html($label) . " -->\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     echo $content . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+    echo "<!-- /" . esc_html($label) . " -->\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**
@@ -64,7 +90,7 @@ function ssm_output_scripts($location) {
     }
 
     if (! ssm_should_disable_global()) {
-        ssm_echo_script_block(get_option($option_keys[$location], ''));
+        ssm_echo_script_block(get_option($option_keys[$location], ''), $location, 'Global');
     }
 
     if (! is_singular()) {
@@ -77,7 +103,7 @@ function ssm_output_scripts($location) {
         return;
     }
 
-    ssm_echo_script_block(get_post_meta($post_id, '_ssm_' . $location, true));
+    ssm_echo_script_block(get_post_meta($post_id, '_ssm_' . $location, true), $location, 'Page');
 }
 
 /**

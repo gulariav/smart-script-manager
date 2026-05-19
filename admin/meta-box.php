@@ -35,11 +35,11 @@ function ssm_add_meta_boxes() {
     foreach (ssm_get_supported_post_types() as $post_type) {
         add_meta_box(
             'ssm_scripts_box',
-            __('Script Manager', 'gv-sss'),
+            __('Smart Script Manager', 'gv-sss'),
             'ssm_meta_box_callback',
             $post_type,
             'normal',
-            'high'
+            'low'
         );
     }
 }
@@ -90,30 +90,21 @@ function ssm_meta_box_callback($post) {
                     <p>
                         <strong><?php esc_html_e('Header Scripts', 'gv-sss'); ?></strong>
                     </p>
-                    <div class="ssm-code-editor ssm-code-editor--compact" data-ssm-editor>
-                        <div class="ssm-code-editor__gutter" aria-hidden="true" data-ssm-lines></div>
-                        <textarea name="ssm_header" rows="6" class="ssm-code-editor__textarea" spellcheck="false" data-ssm-lined-editor><?php echo esc_textarea($header); ?></textarea>
-                    </div>
+                    <textarea name="ssm_header" rows="8" class="ssm-compact-textarea widefat code" spellcheck="false"><?php echo esc_textarea($header); ?></textarea>
                 </section>
 
                 <section class="ssm-tab-panel" id="ssm-panel-body" role="tabpanel" aria-labelledby="ssm-tab-body" hidden>
                     <p>
                         <strong><?php esc_html_e('Body Scripts', 'gv-sss'); ?></strong>
                     </p>
-                    <div class="ssm-code-editor ssm-code-editor--compact" data-ssm-editor>
-                        <div class="ssm-code-editor__gutter" aria-hidden="true" data-ssm-lines></div>
-                        <textarea name="ssm_body" rows="6" class="ssm-code-editor__textarea" spellcheck="false" data-ssm-lined-editor><?php echo esc_textarea($body); ?></textarea>
-                    </div>
+                    <textarea name="ssm_body" rows="8" class="ssm-compact-textarea widefat code" spellcheck="false"><?php echo esc_textarea($body); ?></textarea>
                 </section>
 
                 <section class="ssm-tab-panel" id="ssm-panel-footer" role="tabpanel" aria-labelledby="ssm-tab-footer" hidden>
                     <p>
                         <strong><?php esc_html_e('Footer Scripts', 'gv-sss'); ?></strong>
                     </p>
-                    <div class="ssm-code-editor ssm-code-editor--compact" data-ssm-editor>
-                        <div class="ssm-code-editor__gutter" aria-hidden="true" data-ssm-lines></div>
-                        <textarea name="ssm_footer" rows="6" class="ssm-code-editor__textarea" spellcheck="false" data-ssm-lined-editor><?php echo esc_textarea($footer); ?></textarea>
-                    </div>
+                    <textarea name="ssm_footer" rows="8" class="ssm-compact-textarea widefat code" spellcheck="false"><?php echo esc_textarea($footer); ?></textarea>
                 </section>
             </div>
         </div>

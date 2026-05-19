@@ -4,7 +4,7 @@ Tags: header scripts, footer scripts, tracking code, google tag manager, pixel
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,12 +34,13 @@ The plugin includes:
 * Disable Global Scripts option on individual posts/pages
 * Compact tabbed editor in the page editor
 * Lightweight code-style editor with line numbers in settings
+* HTML comment wrappers around output for easier source debugging
 
 == Installation ==
 
 1. Upload the plugin ZIP from the WordPress admin area via `Plugins > Add Plugin > Upload Plugin`.
 2. Activate `Smart Script Manager`.
-3. Go to `Settings > Script Manager`.
+3. Go to `Settings > Smart Script Manager`.
 4. Add your global Header, Body, and Footer scripts.
 5. Open any supported page or post if you want page-specific scripts or want to disable global scripts for that item.
 
@@ -67,6 +68,12 @@ The plugin is intended for trusted administrators. Raw tracking snippets are pre
 2. Page editor metabox with tabbed script panels
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Updated Settings menu label to Smart Script Manager
+* Improved page-level editor sizing and styling
+* Added HTML comment wrappers around frontend script output
 
 = 1.0.1 =
 

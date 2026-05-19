@@ -11,6 +11,7 @@ Lightweight WordPress plugin to manage global and page-level Header, Body, and F
 - Disable global scripts on individual pages
 - Compact tabbed editor in the post editor
 - Lightweight code-style editor with line numbers in settings
+- HTML comment wrappers around injected output for easier debugging
 - Works well for GTM, GA4, Meta Pixel, Clarity, Hotjar, schema, and custom snippets
 
 ## Use Cases
@@ -29,13 +30,13 @@ Lightweight WordPress plugin to manage global and page-level Header, Body, and F
 1. Download the plugin ZIP.
 2. In WordPress, go to `Plugins > Add Plugin > Upload Plugin`.
 3. Upload the ZIP and activate the plugin.
-4. Go to `Settings > Script Manager`.
+4. Go to `Settings > Smart Script Manager`.
 
 ### Manual Installation
 
 1. Upload the `smart-script-manager` folder to `/wp-content/plugins/`.
 2. Activate the plugin from the WordPress admin.
-3. Open `Settings > Script Manager`.
+3. Open `Settings > Smart Script Manager`.
 
 ## How It Works
 

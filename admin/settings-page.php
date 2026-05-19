@@ -11,8 +11,8 @@ if (! defined('ABSPATH')) {
  */
 function ssm_admin_menu() {
     add_options_page(
-        __('Script Manager', 'gv-sss'),
-        __('Script Manager', 'gv-sss'),
+        __('Smart Script Manager', 'gv-sss'),
+        __('Smart Script Manager', 'gv-sss'),
         'manage_options',
         'smart-script-manager',
         'ssm_settings_page_html'
