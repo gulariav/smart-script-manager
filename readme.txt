@@ -4,7 +4,7 @@ Tags: header scripts, footer scripts, tracking code, google tag manager, pixel
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,16 @@ The plugin is intended for trusted administrators. Raw tracking snippets are pre
 2. Page editor metabox with tabbed script panels
 
 == Changelog ==
+
+= 1.0.1 =
+
+* Moved Script Manager under Settings
+* Improved settings page header and notice placement
+* Reworked page editor tabs to look and behave more clearly
+* Added lightweight code-style editors with line numbers
+* Updated plugin metadata, text domain, and GitHub repo link
+* Adjusted header script output to run earlier in wp_head
+* Refined packaging files for GitHub and WordPress usage
 
 = 1.0.0 =
 

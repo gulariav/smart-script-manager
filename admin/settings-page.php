@@ -66,14 +66,19 @@ function ssm_settings_page_html() {
     $footer_scripts = get_option('ssm_footer_scripts', '');
     ?>
     <div class="wrap ssm-wrap">
+        <h1 class="ssm-page-title"><?php esc_html_e('Smart Script Manager', 'gv-sss'); ?></h1>
+
+        <div class="ssm-notices">
+            <?php settings_errors(); ?>
+        </div>
+
         <div class="ssm-hero">
             <div>
-                <h1><?php esc_html_e('Smart Script Manager', 'gv-sss'); ?></h1>
+                <h2 class="ssm-section-title"><?php esc_html_e('Global Scripts', 'gv-sss'); ?></h2>
                 <p>
                     <?php esc_html_e('One clean place for your site-wide tracking scripts, verification tags, and custom snippets.', 'gv-sss'); ?>
                 </p>
             </div>
-            <div class="ssm-badge"><?php esc_html_e('Global Scripts', 'gv-sss'); ?></div>
         </div>
 
         <div class="ssm-panel">

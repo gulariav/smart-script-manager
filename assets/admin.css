@@ -2,11 +2,21 @@
     max-width: 1100px;
 }
 
+.ssm-page-title {
+    margin: 20px 0 12px;
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.ssm-notices {
+    margin-top: 0;
+}
+
+.ssm-notices .notice {
+    margin: 0 0 16px;
+}
+
 .ssm-hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
     margin: 20px 0;
     padding: 24px 28px;
     border: 1px solid #d5d9e2;
@@ -15,10 +25,10 @@
     box-shadow: 0 14px 34px rgba(25, 35, 58, 0.08);
 }
 
-.ssm-hero h1 {
-    margin: 0 0 6px;
-    font-size: 28px;
-    line-height: 1.2;
+.ssm-section-title {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 1.25;
 }
 
 .ssm-hero p {
@@ -26,17 +36,6 @@
     max-width: 760px;
     color: #4b5568;
     font-size: 14px;
-}
-
-.ssm-badge {
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: #1f2937;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
 }
 
 .ssm-panel {
